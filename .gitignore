@@ -1,1 +1,11 @@
-worker: python bot.py
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+.venv/
+.env.local
+*.log
