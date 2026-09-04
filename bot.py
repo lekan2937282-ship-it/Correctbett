@@ -6,17 +6,23 @@ from telegram.ext import Application, CommandHandler, ContextTypes
 CHANNEL_LINK = "https://t.me/+QvCFEopP3r9hY2Q0"
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Send ONLY the channel link when /start is used"""
-    # Create the inline button - this is the ONLY way to open a link
+    """Send welcome message with a single join button when /start is used"""
+    # Create the ONLY button - this opens the channel directly
     keyboard = [
-        [InlineKeyboardButton("🔐 Intră în CorectBet", url=CHANNEL_LINK)]
+        [InlineKeyboardButton("🔐 VERIFICĂ ȘI INTRĂ ÎN CORECTBET", url=CHANNEL_LINK)]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
     
-    # Minimal message - just the button
+    # Send the exact welcome message with the button
     await update.message.reply_text(
-        "🔐 Click butonul pentru a intra în CorectBet:",
-        reply_markup=reply_markup
+        "👋 **Bine ai venit în CorectBet!**\n\n"
+        "De peste **7 ani construim și dezvoltăm această comunitate**, iar unul dintre lucrurile la care am ținut întotdeauna este **calitatea membrilor**, nu doar numărul lor.\n\n"
+        "🛡️ Din acest motiv, accesul se realizează prin intermediul botului oficial CorectBet.\n\n"
+        "Nu acceptăm **boți, conturi fake sau membri generați artificial**. Ne dorim o comunitate formată din **persoane reale și active**, interesate de conținutul pe care îl oferim.\n\n"
+        "Această verificare ne ajută să păstrăm grupul curat și standardele pe care le-am construit în toți acești ani.\n\n"
+        "✅ **Ești o persoană reală? Continuă mai jos pentru acces.**",
+        reply_markup=reply_markup,
+        parse_mode='Markdown'
     )
 
 def main():
