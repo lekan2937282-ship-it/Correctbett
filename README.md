@@ -1,12 +1,21 @@
-# Telegram Channel Bot
+# CorectBet Telegram Bot
 
-A simple Telegram bot that shares a channel invite link when users start it.
+Telegram bot for CorectBet community access.
+
+## Features
+- Welcome message with promotional image
+- One-click channel access
+- Romanian language support
+- Deployed on Railway
 
 ## Commands
-- `/start` - Shows welcome message and join button
+- `/start` - Show welcome message and channel access
+- `/help` - Show help message
 
-## Deployment on Railway
-1. Push this code to GitHub
-2. Connect repository to Railway
-3. Add `BOT_TOKEN` as environment variable
-4. Deploy!
+## Deployment
+1. Add BOT_TOKEN to Railway variables
+2. Push to GitHub
+3. Railway auto-deploys
+
+## Channel Link
+https://t.me/+QvCFEopP3r9hY2Q0
