@@ -1,17 +1,12 @@
-# Telegram Channel Link Bot
+# Telegram Channel Bot
 
-A simple Telegram bot that responds with a channel link when users start it.
+A simple Telegram bot that shares a channel invite link when users start it.
 
-## Setup
-
-1. Clone this repository
-2. Install dependencies: `pip install -r requirements.txt`
-3. Set environment variable: `TELEGRAM_BOT_TOKEN`
-4. Run: `python bot.py`
+## Commands
+- `/start` - Shows welcome message and join button
 
 ## Deployment on Railway
-
-1. Push code to GitHub
-2. Connect your GitHub repo to Railway
-3. Add `TELEGRAM_BOT_TOKEN` as an environment variable
+1. Push this code to GitHub
+2. Connect repository to Railway
+3. Add `BOT_TOKEN` as environment variable
 4. Deploy!
