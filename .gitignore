@@ -9,3 +9,7 @@ env/
 .venv/
 .env.local
 *.log
+.DS_Store
+*.jpg
+*.png
+*.jpeg
