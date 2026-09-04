@@ -9,14 +9,20 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Send welcome message with join button when /start is used"""
     # Create the inline button
     keyboard = [
-        [InlineKeyboardButton("🚀 Join Our Channel", url=CHANNEL_LINK)]
+        [InlineKeyboardButton("🔐 VERIFICĂ ȘI INTRĂ ÎN CORECTBET", url=CHANNEL_LINK)]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
     
     # Send welcome message with button
     await update.message.reply_text(
-        "👋 Welcome!\n\nThanks for joining us. Tap the button below to access our Telegram channel.",
-        reply_markup=reply_markup
+        "👋 **Bine ai venit în CorectBet!**\n\n"
+        "De peste **7 ani construim și dezvoltăm această comunitate**, iar unul dintre lucrurile la care am ținut întotdeauna este **calitatea membrilor**, nu doar numărul lor.\n\n"
+        "🛡️ Din acest motiv, accesul se realizează prin intermediul botului oficial CorectBet.\n\n"
+        "Nu acceptăm **boți, conturi fake sau membri generați artificial**. Ne dorim o comunitate formată din **persoane reale și active**, interesate de conținutul pe care îl oferim.\n\n"
+        "Această verificare ne ajută să păstrăm grupul curat și standardele pe care le-am construit în toți acești ani.\n\n"
+        "✅ **Ești o persoană reală? Continuă mai jos pentru acces.**",
+        reply_markup=reply_markup,
+        parse_mode='Markdown'
     )
 
 def main():
